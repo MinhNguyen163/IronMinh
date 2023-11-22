@@ -1,0 +1,116 @@
+1. First of all, install git if you don't have it yet, and create a GitHub account. ( You can refer to the lesson "Install Git and Create GitHub Account" in the prework. Follow the guidelines given there. Additionally, you can use these resources: Install git, Version control with git)
+
+2. Create a new repository in the GitHub. Name it Iron+ your name. Example: if your name is Alvaro, you will name the repo IronAlvaro.
+
+done on github site:
+url: https://github.com/MinhNguyen163/IronMinh.git
+
+3. Clone that repo to your computer.
+
+command: minhnguyen@Minhs-MBP-2 Afternoon % git clone https://github.com/MinhNguyen163/IronMinh.git
+
+4. Create a file in that folder. Name it about.txt and add a fun fact about yourself. (You can use the command line: touch nameOfTheFile.txt).
+
+command: minhnguyen@Minhs-MBP-2 IronMinh % touch something_about_Minh.txt
+(base) minhnguyen@Minhs-MBP-2 IronMinh % echo "20 years old" > something_about_Minh.txt
+(base) minhnguyen@Minhs-MBP-2 IronMinh % echo "is a couch potato" >> something_about_Minh.txt
+(base) minhnguyen@Minhs-MBP-2 IronMinh % cat something_about_Minh.txt
+20 years old
+is a couch potato
+
+
+5. Add the file you just created to the git.
+
+command: (base) minhnguyen@Minhs-MBP-2 IronMinh % git add something_about_Minh.txt 
+
+(base) minhnguyen@Minhs-MBP-2 IronMinh % git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   something_about_Minh.txt
+
+6. Commit the changes.
+
+command: git commit -m "added something_about_Minh.txt file"
+#output: [main (root-commit) 33cf6c7] added something_about_Minh.txt file
+ 1 file changed, 2 insertions(+)
+ create mode 100644 something_about_Minh.txt
+
+ #check git log: (base) minhnguyen@Minhs-MBP-2 IronMinh % git log
+ # output: commit 33cf6c7f62225d9e96b5fe771afd80fd381866f3 (HEAD -> main)
+Author: minh nguyen <minhmunvn@gmail.com>
+Date:   Tue Nov 21 22:01:38 2023 +0100
+
+    added something_about_Minh.txt file
+
+
+7. Push the changes to the GitHub and check your repository to make sure everything is there.
+
+command: git push origin main
+
+#output: Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 278 bytes | 278.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/MinhNguyen163/IronMinh.git
+ * [new branch]      main -> main
+
+
+
+Pair Programming Exercise
+
+Pair yourself with a classmate. Send the link of your GitHub repository to your pair via Slack. Now each of you should perform the following set of actions:
+
+1. Fork your classmate's repository.
+
+
+2. Clone the repository, so that you have it locally and can make changes.
+
+command: minhnguyen@Minhs-MBP-2 Afternoon % git clone https://github.com/MinhNguyen163/IronTim.git
+
+
+3. Create a new branch named classmate.
+
+command: git switch -c Tim
+
+4. Create a new file with your name (ex. maya.txt) and finish the following sentence I enrolled Ironhack's Data Analytics bootcamp because.... When you are done, save the changes.
+
+command: echo "I enrolled Ironhack's Data Analytics bootcamp because I want to change career to Data Scientist" > minh.txt
+
+
+5. Add the changes to the git.
+
+command: (base) minhnguyen@Minhs-MBP-2 IronTim % git add minh.txt 
+
+#check: (base) minhnguyen@Minhs-MBP-2 IronTim % git status
+On branch Tim
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   minh.txt
+
+
+6. Commit and push the changes. Now, all the changes should be on your GitHub, inside the forked repository.
+
+#commit:
+command: (base) minhnguyen@Minhs-MBP-2 IronTim % git commit -m "added classmate minh.txt"
+#output: [Tim 992ecb3] added classmate minh.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 minh.txt
+
+
+#push the changes:
+command: (base) minhnguyen@Minhs-MBP-2 IronTim % git push origin Tim
+
+
+7. Create a pull request to make changes appear in the original repository.
+
+https://github.com/TimHoogervorst/IronTim/pulls
+
+8.Merge the branch your classmate created. Now everyone's repos should have the original file (about.txt) as well as the new one with your classmate's name.
+
+done
